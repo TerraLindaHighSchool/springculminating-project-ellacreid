@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private float powerUpStrength = 15.0f;
     public float speed;
     public bool hasPowerUp;
+    public bool hasPowerUpTwo;
     public GameObject powerupIndicator;
 
     // Start is called before the first frame update
@@ -35,12 +36,27 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(PowerUpCountDownRoutine());
             powerupIndicator.gameObject.SetActive(true);
         }
+
+        if (other.CompareTag("Powerup2"))
+        {
+            hasPowerUpTwo = true;
+            Destroy(other.gameObject);
+            StartCoroutine(PowerUpCountDownRoutineTwo());
+            powerupIndicator.gameObject.SetActive(true);
+        }
     }
 
     IEnumerator PowerUpCountDownRoutine()
     {
         yield return new WaitForSeconds(7);
         hasPowerUp = false;
+        powerupIndicator.gameObject.SetActive(false);
+    }
+
+    IEnumerator PowerUpCountDownRoutineTwo()
+    {
+        yield return new WaitForSeconds(10);
+        hasPowerUpTwo = false;
         powerupIndicator.gameObject.SetActive(false);
     }
 
