@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public GameObject powerupIndicator;
     public GameObject powerupIndicatorTwo;
 
-    private int height = 5;
+    private int height = 10;
     private float floatForce = 25.0f;
 
     // Start is called before the first frame update
@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             transform.position = new Vector3(transform.position.x, height);
-            playerRb.AddForce(-Vector3.up * floatForce / 10);
+            playerRb.AddForce(-Vector3.up * floatForce / 10000);
         }
     }
 
