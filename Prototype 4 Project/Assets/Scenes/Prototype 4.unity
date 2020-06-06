@@ -288,6 +288,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &805354805 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1758629138285362, guid: 11a653b9169986c4f9436a3002fb4516,
+    type: 3}
+  m_PrefabInstance: {fileID: 1024066753}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &877001446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -487,7 +493,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   hasPowerUp: 0
+  hasPowerUpTwo: 0
   powerupIndicator: {fileID: 877001447}
+  powerupIndicatorTwo: {fileID: 805354805}
 --- !u!1001 &1024066753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -497,7 +505,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1758629138285362, guid: 11a653b9169986c4f9436a3002fb4516, type: 3}
       propertyPath: m_Name
-      value: Potion Powerup Indicator
+      value: Powerup Indicator 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1758629138285362, guid: 11a653b9169986c4f9436a3002fb4516, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4165187268090244, guid: 11a653b9169986c4f9436a3002fb4516, type: 3}
       propertyPath: m_LocalPosition.x
