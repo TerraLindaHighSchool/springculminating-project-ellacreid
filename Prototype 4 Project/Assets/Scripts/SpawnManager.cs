@@ -51,8 +51,9 @@ public class SpawnManager : MonoBehaviour
     private void hasTimePassed()
     {
         int i = 1;
-        while (Time.fixedUnscaledTime == 2) //* i)
+        while ((int)Time.fixedUnscaledTime == 2 * i)
         {
+            Debug.Log(Time.fixedUnscaledTime);
             Instantiate(powerupTwoPrefab, GenerateSpawnPosition(), powerupTwoPrefab.transform.rotation);
             i++;
         }
